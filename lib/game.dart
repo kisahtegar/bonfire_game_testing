@@ -5,6 +5,7 @@ import 'package:bonfire_game_testing/player/knight.dart';
 import 'package:flutter/material.dart';
 
 import 'decoration/torch.dart';
+import 'enemies/goblin.dart';
 import 'main.dart';
 
 class Game extends StatefulWidget {
@@ -70,6 +71,7 @@ class _GameState extends State<Game> implements GameListener {
           forceTileSize: Vector2(tileSize, tileSize),
           objectsBuilder: {
             'torch': (p) => Torch(p.position),
+            'goblin': (p) => Goblin(p.position),
           },
         ),
         progress: Container(
