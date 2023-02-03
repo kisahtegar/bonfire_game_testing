@@ -1,12 +1,13 @@
 import 'dart:math';
 
 import 'package:bonfire/bonfire.dart';
-import 'package:bonfire_game_testing/player/knight.dart';
 import 'package:flutter/material.dart';
 
 import 'decoration/torch.dart';
 import 'enemies/goblin.dart';
 import 'main.dart';
+import 'npc/wizard_npc.dart';
+import 'player/knight.dart';
 
 class Game extends StatefulWidget {
   const Game({super.key});
@@ -71,6 +72,7 @@ class _GameState extends State<Game> implements GameListener {
           forceTileSize: Vector2(tileSize, tileSize),
           objectsBuilder: {
             'torch': (p) => Torch(p.position),
+            'wizard': (p) => WizardNPC(p.position),
             'goblin': (p) => Goblin(p.position),
           },
         ),
