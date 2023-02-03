@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:bonfire/bonfire.dart';
+import 'package:bonfire_game_testing/npc/wizard_npc.dart';
 import 'package:bonfire_game_testing/player/knight.dart';
 import 'package:flutter/material.dart';
 
@@ -70,6 +71,7 @@ class _GameState extends State<Game> implements GameListener {
           forceTileSize: Vector2(tileSize, tileSize),
           objectsBuilder: {
             'torch': (p) => Torch(p.position),
+            'wizard': (p) => WizardNPC(p.position),
           },
         ),
         progress: Container(
